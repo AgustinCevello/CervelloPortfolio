@@ -81,7 +81,7 @@ const Skills: React.FC<{ t: any }> = ({ t }) => {
             exit="hidden"
             className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-6xl mx-auto px-4"
           >
-            {SKILLS_DATA.find(c => c.name === activeCategory)?.skills.map((skill, idx) => (
+            {SKILLS_DATA.find(c => c.name === activeCategory)?.skills.map((skill) => (
               <motion.div
                 key={skill.name}
                 variants={itemVariants}
