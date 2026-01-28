@@ -2,8 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, MessageCircle, Send, ArrowUpRight } from 'lucide-react';
+import type { ContactTranslation } from '../types';
 
-const Contact: React.FC<{ t: any }> = ({ t }) => {
+const Contact: React.FC<{ t: ContactTranslation }> = ({ t }) => {
   const contacts = [
     {
       name: 'Gmail',

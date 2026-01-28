@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Code } from 'lucide-react';
+import type { ProjectsTranslation, Project } from '../types';
 
-const Projects: React.FC<{ t: any }> = ({ t }) => {
+const Projects: React.FC<{ t: ProjectsTranslation }> = ({ t }) => {
   return (
     <section id="proyectos" className="scroll-mt-32">
       <div className="flex items-center gap-5 mb-20">
@@ -14,7 +14,7 @@ const Projects: React.FC<{ t: any }> = ({ t }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {t.items.map((project: any, index: number) => (
+        {t.items.map((project: Project, index: number) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 40 }}

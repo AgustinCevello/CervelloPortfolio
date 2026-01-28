@@ -2,8 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { User, GraduationCap, MapPin } from 'lucide-react';
+import type { AboutTranslation } from '../types';
 
-const About: React.FC<{ t: any }> = ({ t }) => {
+const About: React.FC<{ t: AboutTranslation }> = ({ t }) => {
   return (
     <section id="sobre-mi" className="scroll-mt-32">
       <div className="flex items-center gap-5 mb-16">

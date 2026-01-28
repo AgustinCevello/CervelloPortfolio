@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SKILLS_DATA } from '../constants';
 import { Cpu, Layout, Server, Database, Terminal, GitBranch, Figma, Zap, ShieldCheck } from 'lucide-react';
+import type { SkillsTranslation } from '../types';
 
-const Skills: React.FC<{ t: any }> = ({ t }) => {
+const Skills: React.FC<{ t: SkillsTranslation }> = ({ t }) => {
   const [activeCategory, setActiveCategory] = useState(SKILLS_DATA[0].name);
 
   const getIcon = (name: string) => {

@@ -2,8 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
+import type { ExperienceTranslation, ExperienceItem } from '../types';
 
-const Experience: React.FC<{ t: any }> = ({ t }) => {
+const Experience: React.FC<{ t: ExperienceTranslation }> = ({ t }) => {
   return (
     <section id="experiencia" className="scroll-mt-32">
       <div className="flex items-center gap-5 mb-20">
@@ -14,8 +15,7 @@ const Experience: React.FC<{ t: any }> = ({ t }) => {
       </div>
 
       <div className="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-lila-500/30 before:to-transparent">
-        {t.items.map((item: any, index: number) => (
-          <motion.div
+        {t.items.map((item: ExperienceItem, index: number) => (          <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

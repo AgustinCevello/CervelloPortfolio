@@ -2,8 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react';
+import type { HeroTranslation } from '../types';
 
-const Hero: React.FC<{ t: any }> = ({ t }) => {
+const Hero: React.FC<{ t: HeroTranslation }> = ({ t }) => {
   return (
     <section id="inicio" className="min-h-[85vh] flex flex-col justify-center items-center text-center">
       <motion.div
