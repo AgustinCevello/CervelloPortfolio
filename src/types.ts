@@ -2,6 +2,7 @@ export interface Project {
   title: string;
   description: string;
   techs: string[];
+  url: string;
 }
 
 export interface ExperienceItem {

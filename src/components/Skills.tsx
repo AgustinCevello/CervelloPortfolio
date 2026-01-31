@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SKILLS_DATA } from '../constants';
-import { Cpu, Layout, Server, Database, Terminal, GitBranch, Figma, Zap, ShieldCheck } from 'lucide-react';
+import { Cpu} from 'lucide-react';
 import type { SkillsTranslation } from '../types';
 
 const Skills: React.FC<{ t: SkillsTranslation }> = ({ t }) => {
@@ -10,15 +10,16 @@ const Skills: React.FC<{ t: SkillsTranslation }> = ({ t }) => {
 
   const getIcon = (name: string) => {
     const n = name.toLowerCase();
-    if (n.includes('react') || n.includes('tailwind') || n.includes('html') || n.includes('framer')) return <Layout size={26} />;
-    if (n.includes('js') || n.includes('python')) return <Terminal size={26} />;
-    if (n.includes('node')) return <Server size={26} />;
-    if (n.includes('sql') || n.includes('postgres')) return <Database size={26} />;
-    if (n.includes('arduino') || n.includes('hardware')) return <Cpu size={26} />;
-    if (n.includes('git') || n.includes('scrum')) return <GitBranch size={26} />;
-    if (n.includes('figma')) return <Figma size={26} />;
-    if (n.includes('zap') || n.includes('energía')) return <Zap size={26} />;
-    if (n.includes('shield') || n.includes('seguridad')) return <ShieldCheck size={26} />;
+    if (n.includes('react')) return <i className="bx bxl-react text-[26px]" />;
+    if (n.includes('javascript') || n.includes('js')) return <i className="bx bxl-javascript text-[26px]" />;
+    if (n.includes('typescript')) return <i className="bx bxl-typescript text-[26px]" />;
+    if (n.includes('html')) return <i className="bx bxl-html5 text-[26px]" />;
+    if (n.includes('css') || n.includes('tailwind')) return <i className="bx bxl-css3 text-[26px]" />;
+    if (n.includes('python')) return <i className="bx bxl-python text-[26px]" />;
+    if (n.includes('node')) return <i className="bx bxl-nodejs text-[26px]" />;
+    if (n.includes('sql') || n.includes('postgres')) return <i className="bx bxl-postgresql text-[26px]" />;
+    if (n.includes('git')) return <i className="bx bxl-git text-[26px]" />;
+    if (n.includes('figma')) return <i className="bx bxl-figma text-[26px]" />;
     return <Cpu size={26} />;
   };
 

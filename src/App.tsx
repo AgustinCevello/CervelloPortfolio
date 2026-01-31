@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
@@ -10,6 +9,8 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { TRANSLATIONS } from './constants';
+// 1. IMPORTAMOS LA NUEVA DATA
+import { projectsData } from './data/projects'; 
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -80,7 +81,10 @@ const App: React.FC = () => {
       <main className="container mx-auto px-4 sm:px-6 lg:px-12 space-y-48 py-24 relative z-10">
         <Hero t={t.hero} />
         <Experience t={t.experience} />
-        <Projects t={t.projects} />
+        
+        {/* 2. USAMOS LA NUEVA PROP AQUÍ */}
+        <Projects t={projectsData} />
+        
         <Skills t={t.skills} />
         <About t={t.about} />
         <Contact t={t.contact} />

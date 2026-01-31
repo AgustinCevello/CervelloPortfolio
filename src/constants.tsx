@@ -1,4 +1,3 @@
-
 export const TRANSLATIONS = {
   ES: {
     nav: {
@@ -12,20 +11,20 @@ export const TRANSLATIONS = {
     hero: {
       greeting: 'Hola, soy',
       role: 'Desarrollador Full-Stack & Especialista en Sistemas.',
-      description: 'Transformo ideas en soluciones digitales de alto impacto integrando software, hardware e infraestructura.',
+      description: 'Transformo necesidades complejas en soluciones digitales eficientes, integrando desarrollo web, sistemas de gestión y visión estratégica.',
       cvBtn: 'Descargar CV',
       projectsBtn: 'Ver Proyectos'
     },
     about: {
       title: 'Sobre Mí',
-      p1: 'Soy un apasionado por la tecnología con una base sólida como <span class="text-lila-600 dark:text-lila-400 font-semibold">Técnico Electrónico</span>. Mi formación me permite abordar desafíos desde el nivel de hardware e infraestructura hasta el desarrollo de software de alta gama.',
-      p2: 'Actualmente curso la <span class="text-lila-600 dark:text-lila-400 font-semibold">Licenciatura en Gestión de Tecnología de la Información</span> en UADE, complementando mi perfil técnico con una visión estratégica y de negocio.',
-      p3: 'Me especializo en el desarrollo <span class="text-lila-600 dark:text-lila-400 font-semibold">Full-Stack</span>, con un enfoque particular en la optimización de procesos mediante tecnología y el diseño de interfaces centradas en el usuario (UX/UI).',
-      location: 'Disponible para trabajar presencial en CABA, Argentina.',
+      p1: 'Mi perfil combina la lógica estructurada de un <span class="text-lila-600 dark:text-lila-400 font-semibold">Técnico Electrónico</span> con la creatividad del desarrollo de software. Esta dualidad me permite entender los proyectos desde el "fierro" hasta el código.',
+      p2: 'Actualmente avanzo en la <span class="text-lila-600 dark:text-lila-400 font-semibold">Licenciatura en Gestión TI</span> en UADE, buscando siempre el equilibrio entre calidad técnica y valor de negocio.',
+      p3: 'Me especializo en arquitecturas <span class="text-lila-600 dark:text-lila-400 font-semibold">Full-Stack</span>, creando desde sistemas de stock en tiempo real hasta experiencias web inmersivas.',
+      location: 'Base en Buenos Aires, Argentina. Disponible para desafíos híbridos o remotos.',
       eduTitle: 'Educación',
       edu1: 'Lic. en Gestión de TI',
       edu1Sub: 'UADE (En curso)',
-      edu2: 'Tecnicatura Univ. en Desarrollo de Software',
+      edu2: 'Tec. Univ. en Desarrollo de Software',
       edu2Sub: 'UADE (2023 - 2025)',
       edu3: 'Técnico Electrónico',
       edu3Sub: 'Escuela República Francesa',
@@ -33,7 +32,7 @@ export const TRANSLATIONS = {
       lang1: 'Español',
       lang1Lvl: 'Nativo',
       lang2: 'Inglés',
-      lang2Lvl: 'Intermedio (B2)',
+      lang2Lvl: 'Intermedio (B2 - Cambridge)',
       lang3: 'Chino',
       lang3Lvl: 'Inicial'
     },
@@ -43,29 +42,29 @@ export const TRANSLATIONS = {
         {
           role: 'Desarrollador Full-Stack & Sistemas',
           company: 'Freelance',
-          period: 'Marzo 2024 - Actualidad',
+          period: 'Marzo 2025 - Actualidad',
           desc: [
-            'Desarrollo integral de plataformas web para sectores de ingeniería solar (VR3D) e industrial (Automacer).',
-            'Implementación de sistemas de gestión con monitoreo de stock en tiempo real y facturación electrónica.',
-            'Diseño de interfaces enfocadas en UX para la difusión de recursos pedagógicos.'
+            'Desarrollo de "Automacer": Sistema integral de gestión de stock con sincronización en tiempo real y facturación electrónica.',
+            'Arquitectura y desarrollo de plataformas web para ingeniería (VR3D) e instituciones (Renuevo de Vida).',
+            'Optimización de procesos de venta mediante soluciones de software a medida.'
           ]
         },
         {
           role: 'Desarrollador Mobile',
           company: 'UADE',
-          period: 'Marzo 2024 - Junio 2024',
+          period: 'Marzo 2025 - Junio 2025',
           desc: [
             'Diseño y desarrollo de aplicaciones móviles nativas e híbridas bajo estándares de industria.',
-            'Colaboración en proyectos de investigación tecnológica aplicada.'
+            'Participación en equipos de investigación tecnológica aplicada.'
           ]
         },
         {
-          role: 'Piloto de Dron / Edición Multimedia',
-          company: 'DJI',
-          period: 'Marzo 2022 - Octubre 2023',
+          role: 'Especialista Técnico & Operaciones',
+          company: 'Independiente / Varios',
+          period: '2017 - 2023',
           desc: [
-            'Ejecución de vuelos de precisión para obtención de activos visuales técnicos.',
-            'Procesamiento y edición de material audiovisual para presentaciones industriales.'
+            'Gestión técnica de proyectos: Vuelos de precisión (Drones) y relevamiento audiovisual para ingeniería.',
+            'Implementación de infraestructura: Sistemas de energía solar y seguridad electrónica.'
           ]
         }
       ]
@@ -75,35 +74,39 @@ export const TRANSLATIONS = {
       visit: 'Visitar sitio',
       items: [
         {
+          title: 'Automacer',
+          description: 'Solución integral de gestión (ERP) para automatización de ventas y control de stock en tiempo real.',
+          techs: ['React', 'Node.js', 'SQL'],
+          url: 'https://automacer.netlify.app/'
+        },
+        {
+          title: 'VR3D Ingeniería',
+          description: 'Plataforma corporativa para estudio de ingeniería solar con portafolio de obras.',
+          techs: ['React', 'TypeScript', 'Tailwind'],
+          url: 'https://vr3d.com.ar/'
+        },
+        {
           title: 'Renuevo de Vida',
-          description: 'Desarrollo integral de plataforma web institucional con enfoque en accesibilidad.',
-          techs: ['React', 'JavaScript', 'Tailwind']
-        },
-        {
-          title: 'VR3D',
-          description: 'Plataforma digital especializada para el sector de energías renovables e ingeniería solar.',
-          techs: ['React', 'Node.js', 'PostgreSQL']
-        },
-        {
-          title: 'Julivai',
-          description: 'Diseño de interfaz interactiva y portafolio profesional personalizado de alto rendimiento.',
-          techs: ['HTML5', 'CSS3', 'Framer']
+          description: 'Web institucional enfocada en comunidad, con diseño accesible y optimización de carga.',
+          techs: ['React', 'JavaScript', 'CSS3'],
+          url: 'https://www.renuevodevida.com.ar/'
         },
         {
           title: 'Sembrar la Palabra',
-          description: 'Sitio web educativo con enfoque en recursos pedagógicos y UX avanzada.',
-          techs: ['React', 'Tailwind', 'Framer Motion']
+          description: 'Plataforma educativa de recursos bíblicos con experiencia de lectura optimizada.',
+          techs: ['React', 'Framer Motion', 'UI/UX'],
+          url: 'https://sembrarlapalabra.com.ar/'
         }
       ]
     },
     skills: {
-      title: 'Core Tech Stack',
-      description: 'Especialización técnica dividida en tres micro-entornos de desarrollo e infraestructura.'
+      title: 'Stack Tecnológico',
+      description: 'Dominio de herramientas para desarrollo web moderno, backend y gestión de infraestructuras.'
     },
     contact: {
       title: 'Contacto',
-      description: '¿Tienes un proyecto en mente o buscas un perfil híbrido software/hardware? ¡Escríbeme!',
-      labels: { email: 'Enviar Email', chat: 'Chat Directo', connect: 'Conectar', repos: 'Ver Repos' }
+      description: '¿Buscas un desarrollador que entienda tanto el código como el negocio? Hablemos.',
+      labels: { email: 'Enviar Email', chat: 'Chat', connect: 'LinkedIn', repos: 'GitHub' }
     }
   },
   EN: {
@@ -117,24 +120,24 @@ export const TRANSLATIONS = {
     },
     hero: {
       greeting: "Hi, I'm",
-      role: 'Full-Stack & Systems Developer Specialist.',
-      description: 'Transforming ideas into high-impact digital solutions by integrating software, hardware, and infrastructure.',
+      role: 'Full-Stack Developer & Systems Specialist.',
+      description: 'I transform complex needs into efficient digital solutions, integrating web development, management systems, and strategic vision.',
       cvBtn: 'Download CV',
       projectsBtn: 'View Projects'
     },
     about: {
       title: 'About Me',
-      p1: 'I am a technology enthusiast with a solid background as an <span class="text-lila-600 dark:text-lila-400 font-semibold">Electronic Technician</span>. My training allows me to tackle challenges from hardware and infrastructure to high-end software development.',
-      p2: 'Currently pursuing a <span class="text-lila-600 dark:text-lila-400 font-semibold">B.S. in IT Management</span> at UADE, complementing my technical profile with a strategic business vision.',
-      p3: 'I specialize in <span class="text-lila-600 dark:text-lila-400 font-semibold">Full-Stack</span> development, with a particular focus on process optimization through technology and user-centered UX/UI design.',
-      location: 'Available for on-site work in Buenos Aires (CABA), Argentina.',
+      p1: 'My profile combines the structured logic of an <span class="text-lila-600 dark:text-lila-400 font-semibold">Electronic Technician</span> with the creativity of software development. This duality allows me to understand projects from hardware to code.',
+      p2: 'I am currently pursuing a <span class="text-lila-600 dark:text-lila-400 font-semibold">B.S. in IT Management</span> at UADE, always seeking the balance between technical quality and business value.',
+      p3: 'I specialize in <span class="text-lila-600 dark:text-lila-400 font-semibold">Full-Stack</span> architectures, creating everything from real-time stock systems to immersive web experiences.',
+      location: 'Based in Buenos Aires, Argentina. Available for hybrid or remote challenges.',
       eduTitle: 'Education',
       edu1: 'B.S. in IT Management',
       edu1Sub: 'UADE (In progress)',
-      edu2: 'Associate Degree in Software Development',
+      edu2: 'Associate Degree in Software Dev',
       edu2Sub: 'UADE (2023 - 2025)',
       edu3: 'Electronic Technician',
-      edu3Sub: 'Republica Francesa Technical High School',
+      edu3Sub: 'Republica Francesa Technical HS',
       langTitle: 'Languages',
       lang1: 'Spanish',
       lang1Lvl: 'Native',
@@ -149,29 +152,29 @@ export const TRANSLATIONS = {
         {
           role: 'Full-Stack & Systems Developer',
           company: 'Freelance',
-          period: 'March 2024 - Present',
+          period: 'March 2025 - Present',
           desc: [
-            'End-to-end development of web platforms for solar engineering (VR3D) and industrial (Automacer) sectors.',
-            'Implementation of management systems with real-time stock monitoring and e-invoicing.',
-            'Design of UX-focused interfaces for the dissemination of pedagogical resources.'
+            'Development of "Automacer": Comprehensive stock management system with real-time synchronization and e-invoicing.',
+            'Architecture and development of web platforms for engineering (VR3D) and institutions (Renuevo de Vida).',
+            'Optimization of sales processes through custom software solutions.'
           ]
         },
         {
           role: 'Mobile Developer',
           company: 'UADE',
-          period: 'March 2024 - June 2024',
+          period: 'March 2025 - June 2025',
           desc: [
             'Design and development of native and hybrid mobile applications under industry standards.',
-            'Collaboration on applied technology research projects.'
+            'Participation in applied technology research teams.'
           ]
         },
         {
-          role: 'Drone Pilot / Multimedia Editor',
-          company: 'DJI',
-          period: 'March 2022 - October 2023',
+          role: 'Technical Specialist & Operations',
+          company: 'Independent / Various',
+          period: '2017 - 2023',
           desc: [
-            'Execution of precision flights to obtain technical visual assets.',
-            'Processing and editing of audiovisual material for industrial presentations.'
+            'Technical project management: Precision flights (Drones) and audiovisual surveying for engineering.',
+            'Infrastructure implementation: Solar energy systems and electronic security.'
           ]
         }
       ]
@@ -181,65 +184,69 @@ export const TRANSLATIONS = {
       visit: 'Visit site',
       items: [
         {
+          title: 'Automacer',
+          description: 'Comprehensive ERP solution for sales automation and real-time stock control.',
+          techs: ['React', 'Node.js', 'SQL'],
+          url: 'https://automacer.netlify.app/'
+        },
+        {
+          title: 'VR3D Engineering',
+          description: 'Corporate platform for solar engineering studio with project portfolio.',
+          techs: ['React', 'TypeScript', 'Tailwind'],
+          url: 'https://vr3d.com.ar/'
+        },
+        {
           title: 'Renuevo de Vida',
-          description: 'Full development of an institutional web platform with an accessibility focus.',
-          techs: ['React', 'JavaScript', 'Tailwind']
-        },
-        {
-          title: 'VR3D',
-          description: 'Specialized digital platform for the renewable energy and solar engineering sector.',
-          techs: ['React', 'Node.js', 'PostgreSQL']
-        },
-        {
-          title: 'Julivai',
-          description: 'Interactive interface design and personalized high-performance professional portfolio.',
-          techs: ['HTML5', 'CSS3', 'Framer']
+          description: 'Institutional web focused on community, with accessible design and load optimization.',
+          techs: ['React', 'JavaScript', 'CSS3'],
+          url: 'https://www.renuevodevida.com.ar/'
         },
         {
           title: 'Sembrar la Palabra',
-          description: 'Educational website focused on pedagogical resources and advanced UX.',
-          techs: ['React', 'Tailwind', 'Framer Motion']
+          description: 'Educational platform for biblical resources with optimized reading experience.',
+          techs: ['React', 'Framer Motion', 'UI/UX'],
+          url: 'https://sembrarlapalabra.com.ar/'
         }
       ]
     },
     skills: {
-      title: 'Core Tech Stack',
-      description: 'Technical specialization divided into three development and infrastructure micro-environments.'
+      title: 'Tech Stack',
+      description: 'Mastery of tools for modern web development, backend, and infrastructure management.'
     },
     contact: {
       title: 'Contact',
-      description: 'Have a project in mind or looking for a hybrid software/hardware profile? Reach out!',
-      labels: { email: 'Send Email', chat: 'Live Chat', connect: 'Connect', repos: 'View Repos' }
+      description: 'Looking for a developer who understands both code and business? Let\'s talk.',
+      labels: { email: 'Send Email', chat: 'Chat', connect: 'LinkedIn', repos: 'GitHub' }
     }
   }
 };
 
 export const SKILLS_DATA = [
   {
-    name: 'Frontend',
+    name: "Frontend",
     skills: [
-      { name: 'React', level: 90 },
-      { name: 'JavaScript', level: 85 },
-      { name: 'Tailwind CSS', level: 95 },
-      { name: 'Framer Motion', level: 80 }
+      { name: "React", level: 90 },
+      { name: "JavaScript", level: 85 },
+      { name: "TypeScript", level: 80 },
+      { name: "HTML5", level: 95 },
+      { name: "CSS3", level: 90 },
+      { name: "Tailwind CSS", level: 85 },
     ]
   },
   {
-    name: 'Backend',
+    name: "Backend",
     skills: [
-      { name: 'Node.js', level: 80 },
-      { name: 'Python', level: 75 },
-      { name: 'Java', level: 70 },
-      { name: 'PostgreSQL', level: 75 }
+      { name: "Node.js", level: 80 },
+      { name: "Python", level: 75 },
+      { name: "SQL / Postgres", level: 75 }, // Slight update to be more specific
     ]
   },
   {
-    name: 'Sistemas/Hardware',
+    name: "Tools / Other",
     skills: [
-      { name: 'Arduino', level: 85 },
-      { name: 'Energía Solar', level: 90 },
-      { name: 'Seguridad Electrónica', level: 85 },
-      { name: 'Git/Scrum', level: 85 }
+      { name: "Git & GitHub", level: 85 },
+      { name: "Figma (UX/UI)", level: 80 },
+      { name: "English (B2)", level: 75 } // Added language as a skill
     ]
   }
 ];

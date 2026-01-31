@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, MessageCircle, Send, ArrowUpRight } from 'lucide-react';
@@ -75,7 +74,7 @@ const Contact: React.FC<{ t: ContactTranslation }> = ({ t }) => {
             <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-2">
               {contact.name}
             </h3>
-            <p className="text-base font-black text-slate-900 dark:text-slate-100 mb-6 break-all px-2 tracking-tight">
+            <p className="text-sm font-black text-slate-900 dark:text-slate-100 mb-6 break-words hyphens-auto px-2 tracking-tight leading-snug">
               {contact.value}
             </p>
             <div className="mt-auto flex items-center gap-2 text-sm font-black text-lila-600 dark:text-lila-400 uppercase tracking-widest group-hover:text-lila-500 transition-colors">
