@@ -264,7 +264,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
               {/* Footer del menú */}
               <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-lila-500/20">
                 <p className="text-xs text-center text-slate-500 dark:text-slate-400">
-                  © 2025 BAA
+                  © 2025 Cervello
                 </p>
               </div>
             </motion.div>
