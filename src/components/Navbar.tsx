@@ -99,12 +99,12 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
               onClick={() => setActiveItem(item.id)}
               className="relative flex items-center justify-center px-4 py-2 rounded-full no-underline group"
             >
-              <span className={`relative z-10 flex items-center gap-2 font-medium transition-colors duration-200 ${
+              <span className={`relative z-10 flex items-center justify-center gap-2 font-medium transition-colors duration-200 ${
                 activeItem === item.id ? 'text-white' : 'text-slate-400 hover:text-lila-400'
               }`}>
-                {item.icon}
+                <span className="flex items-center justify-center">{item.icon}</span>
                 {!scrolled && (
-                  <span className="hidden md:block text-[11px] font-bold uppercase tracking-wider">
+                  <span className="hidden md:block text-[11px] font-bold uppercase tracking-wider leading-none">
                     {item.name}
                   </span>
                 )}
@@ -137,10 +137,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
           <button
             type="button"
             onClick={toggleLanguage}
-            className="flex items-center gap-2 px-3 py-2 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-400 hover:bg-lila-500/20 hover:text-lila-500 transition-all group"
+            className="flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-400 hover:bg-lila-500/20 hover:text-lila-500 transition-all group"
           >
             <Globe size={18} className="group-hover:rotate-12 transition-transform" />
-            <span className="text-[11px] font-bold">{language}</span>
+            <span className="text-[11px] font-bold leading-none">{language}</span>
           </button>
 
           <div className="w-px h-6 bg-lila-500/20" />

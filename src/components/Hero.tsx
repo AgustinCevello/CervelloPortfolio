@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react';
@@ -15,9 +14,9 @@ const Hero: React.FC<{ t: HeroTranslation }> = ({ t }) => {
       >
         <div className="w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-lila-500/20 liquid-glass p-1.5 shadow-2xl">
           <img 
-            src="https://picsum.photos/seed/agustin/400" 
+            src="/src/assets/images/Perfil.png" 
             alt="Agustín Cervello" 
-            className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500"
+            className="w-full h-full object-cover rounded-full transition-all duration-500"
           />
         </div>
         <motion.div 
