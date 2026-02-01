@@ -14,7 +14,7 @@ const Hero: React.FC<{ t: HeroTranslation }> = ({ t }) => {
       >
         <div className="w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-lila-500/20 liquid-glass p-1.5 shadow-2xl">
           <img 
-            src="/src/assets/images/Perfil.png" 
+            src="/images/Perfil.png"
             alt="Agustín Cervello" 
             className="w-full h-full object-cover rounded-full transition-all duration-500"
           />
