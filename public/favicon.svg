@@ -1,4 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#7c3aed"/>
-  <path d="M32 12 L14 48 L24 48 L27 40 L37 40 L40 48 L50 48 Z M32 26 L35 34 L29 34 Z" fill="#ffffff"/>
+  <!-- Fondo con gradiente sutil -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo redondeado -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  
+  <!-- Letra A moderna y geométrica -->
+  <path d="M32 14 L18 50 L26 50 L29 42 L35 42 L38 50 L46 50 Z" fill="#ffffff"/>
+  <rect x="26" y="32" width="12" height="5" rx="1" fill="url(#bg)"/>
 </svg>
