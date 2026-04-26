@@ -164,11 +164,13 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
         >
           <button
             type="button"
+            aria-label={`Cambiar idioma a ${language === 'ES' ? 'inglés' : 'español'}`}
+            aria-pressed={language === 'EN'}
             onClick={toggleLanguage}
             className="flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-400 hover:bg-lila-500/20 hover:text-lila-500 transition-all group"
           >
             <Languages size={18} className="group-hover:rotate-12 transition-transform" />
-            <span className="text-[11px] font-bold leading-none">{language}</span>
+            <span className="text-[11px] font-bold leading-none" aria-hidden="true">{language}</span>
           </button>
 
           <div className="w-px h-6 bg-lila-500/20" />
@@ -176,6 +178,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
           <button
             type="button"
             aria-label={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+            aria-pressed={isDarkMode}
             onClick={toggleTheme}
             className="p-2.5 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-400 hover:bg-lila-500/20 hover:text-lila-500 transition-colors"
           >
@@ -191,6 +194,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
         <motion.button
           type="button"
           aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={mobileMenuOpen}
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -212,6 +216,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
           <button
             type="button"
             aria-label={`Cambiar idioma a ${language === 'ES' ? 'inglés' : 'español'}`}
+            aria-pressed={language === 'EN'}
             onClick={toggleLanguage}
             className="p-2 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-400 hover:bg-lila-500/20 hover:text-lila-500 transition-all"
           >
@@ -223,6 +228,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
           <button
             type="button"
             aria-label={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+            aria-pressed={isDarkMode}
             onClick={toggleTheme}
             className="p-2 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-400 hover:bg-lila-500/20 hover:text-lila-500 transition-colors"
           >

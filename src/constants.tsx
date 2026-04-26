@@ -126,7 +126,7 @@ export const TRANSLATIONS = {
       labels: { email: 'Enviar Email', chat: 'Chat', connect: 'LinkedIn', repos: 'GitHub' }
     },
     footer: {
-      builtWith: 'Diseñado y construido con React + Tailwind CSS.',
+      builtWith: 'Hecho con React y café',
       tagline: '"Construyendo soluciones inteligentes y escalables con tecnologías web modernas"'
     }
   },
@@ -257,7 +257,7 @@ export const TRANSLATIONS = {
       labels: { email: 'Send Email', chat: 'Chat', connect: 'LinkedIn', repos: 'GitHub' }
     },
     footer: {
-      builtWith: 'Designed and built with React + Tailwind CSS.',
+      builtWith: 'Built with React and coffee',
       tagline: '"Building intelligent, scalable solutions with modern web technologies"'
     }
   }

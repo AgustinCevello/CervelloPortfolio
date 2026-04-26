@@ -89,9 +89,9 @@ const Hero: React.FC<{ t: HeroTranslation }> = ({ t }) => {
         className="flex items-center gap-8"
       >
         {[
-          { icon: <Github size={24} />, url: 'https://github.com/AgustinCevello', label: 'GitHub' },
-          { icon: <Linkedin size={24} />, url: 'https://www.linkedin.com/in/agustin-cervello-b04b37235/', label: 'LinkedIn' },
-          { icon: <Mail size={24} />, url: 'mailto:aguscervello@gmail.com', label: 'Email' }
+          { icon: <Github size={24} />, url: 'https://github.com/AgustinCevello', label: 'Ver perfil de GitHub' },
+          { icon: <Linkedin size={24} />, url: 'https://www.linkedin.com/in/agustin-cervello-b04b37235/', label: 'Ver perfil de LinkedIn' },
+          { icon: <Mail size={24} />, url: 'mailto:aguscervello@gmail.com', label: 'Enviar email' }
         ].map((social, i) => (
           <motion.a
             key={i}
