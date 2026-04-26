@@ -90,7 +90,7 @@ const App: React.FC = () => {
         <Contact t={t.contact} />
       </main>
 
-      <Footer />
+      <Footer t={t.footer} />
     </div>
   );
 };

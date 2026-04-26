@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Home, 
@@ -9,7 +9,7 @@ import {
   Mail, 
   Sun, 
   Moon,
-  Globe,
+  Languages,
   Menu,
   X
 } from 'lucide-react';
@@ -25,6 +25,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
   const [scrolled, setScrolled] = useState(false);
   const [activeItem, setActiveItem] = useState('inicio');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const clickNavInProgress = useRef(false);
+  const scrollTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const translations = {
     ES: {
@@ -48,17 +51,27 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
   const t = translations[language];
 
   const navItems = [
-    { id: 'inicio', name: t.inicio, icon: <Home size={18} />, href: '#inicio' },
-    { id: 'experiencia', name: t.experiencia, icon: <Briefcase size={18} />, href: '#experiencia' },
-    { id: 'proyectos', name: t.proyectos, icon: <Code size={18} />, href: '#proyectos' },
-    { id: 'habilidades', name: t.habilidades, icon: <Cpu size={18} />, href: '#habilidades' },
-    { id: 'sobre-mi', name: t.sobremi, icon: <User size={18} />, href: '#sobre-mi' },
-    { id: 'contacto', name: t.contacto, icon: <Mail size={18} />, href: '#contacto' },
+    { id: 'inicio', name: t.inicio, esName: translations.ES.inicio, enName: translations.EN.inicio, icon: <Home size={18} />, href: '#inicio' },
+    { id: 'experiencia', name: t.experiencia, esName: translations.ES.experiencia, enName: translations.EN.experiencia, icon: <Briefcase size={18} />, href: '#experiencia' },
+    { id: 'proyectos', name: t.proyectos, esName: translations.ES.proyectos, enName: translations.EN.proyectos, icon: <Code size={18} />, href: '#proyectos' },
+    { id: 'habilidades', name: t.habilidades, esName: translations.ES.habilidades, enName: translations.EN.habilidades, icon: <Cpu size={18} />, href: '#habilidades' },
+    { id: 'sobre-mi', name: t.sobremi, esName: translations.ES.sobremi, enName: translations.EN.sobremi, icon: <User size={18} />, href: '#sobre-mi' },
+    { id: 'contacto', name: t.contacto, esName: translations.ES.contacto, enName: translations.EN.contacto, icon: <Mail size={18} />, href: '#contacto' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+      
+      scrollTimeout.current = setTimeout(() => {
+        clickNavInProgress.current = false;
+      }, 100);
+
+      if (clickNavInProgress.current) return;
       
       const sections = ['inicio', 'experiencia', 'proyectos', 'habilidades', 'sobre-mi', 'contacto'];
       for (const section of sections) {
@@ -71,11 +84,17 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
         }
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+    };
   }, []);
 
   const handleNavClick = (id: string) => {
+    clickNavInProgress.current = true;
     setActiveItem(id);
     setMobileMenuOpen(false);
   };
@@ -90,25 +109,34 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
           layout
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="liquid-glass flex items-center gap-1 p-1.5 rounded-full border border-lila-500/20 shadow-xl pointer-events-auto transition-all duration-500"
+          transition={{
+            type: "spring",
+            stiffness: 500,
+            damping: 35,
+            mass: 1
+          }}
+          className="liquid-glass flex items-center gap-1 p-1.5 rounded-full border border-lila-500/20 shadow-xl pointer-events-auto"
         >
           {navItems.map((item) => (
-            <a
+            <motion.a
+              layout
               key={item.id}
               href={item.href}
-              onClick={() => setActiveItem(item.id)}
+              onClick={() => handleNavClick(item.id)}
               className="relative flex items-center justify-center px-4 py-2 rounded-full no-underline group"
             >
-              <span className={`relative z-10 flex items-center justify-center gap-2 font-medium transition-colors duration-200 ${
+              <motion.span layout className={`relative z-10 flex items-center justify-center gap-2 font-medium transition-colors duration-200 ${
                 activeItem === item.id ? 'text-white' : 'text-slate-400 hover:text-lila-400'
               }`}>
-                <span className="flex items-center justify-center">{item.icon}</span>
+                <motion.span layout className="flex items-center justify-center">{item.icon}</motion.span>
                 {!scrolled && (
-                  <span className="hidden md:block text-[11px] font-bold uppercase tracking-wider leading-none">
-                    {item.name}
-                  </span>
+                  <motion.span layout className="hidden md:grid text-[11px] font-bold uppercase tracking-wider leading-none">
+                    <span className="col-start-1 row-start-1 invisible" aria-hidden="true">{item.esName}</span>
+                    <span className="col-start-1 row-start-1 invisible" aria-hidden="true">{item.enName}</span>
+                    <span className="col-start-1 row-start-1 flex justify-center items-center">{item.name}</span>
+                  </motion.span>
                 )}
-              </span>
+              </motion.span>
 
               {activeItem === item.id && (
                 <motion.div
@@ -123,7 +151,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
                   style={{ originY: "center" }} 
                 />
               )}
-            </a>
+            </motion.a>
           ))}
         </motion.nav>
 
@@ -139,7 +167,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
             onClick={toggleLanguage}
             className="flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-400 hover:bg-lila-500/20 hover:text-lila-500 transition-all group"
           >
-            <Globe size={18} className="group-hover:rotate-12 transition-transform" />
+            <Languages size={18} className="group-hover:rotate-12 transition-transform" />
             <span className="text-[11px] font-bold leading-none">{language}</span>
           </button>
 
@@ -187,7 +215,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode, language, togg
             onClick={toggleLanguage}
             className="p-2 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-400 hover:bg-lila-500/20 hover:text-lila-500 transition-all"
           >
-            <Globe size={18} />
+            <Languages size={18} />
           </button>
 
           <div className="w-px h-5 bg-lila-500/20" />

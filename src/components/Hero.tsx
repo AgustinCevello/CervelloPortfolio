@@ -13,13 +13,14 @@ const Hero: React.FC<{ t: HeroTranslation }> = ({ t }) => {
         className="relative mb-10"
       >
         <div className="w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-lila-500/20 liquid-glass p-1.5 shadow-2xl">
-          <img 
-            src="/images/Perfil.png"
-            alt="Agustín Cervello" 
+          <img
+            src="/images/Perfil.jpg"
+            alt="Agustín Cervello"
+            width="192"
+            height="192"
             className="w-full h-full object-cover rounded-full transition-all duration-500"
           />
-        </div>
-        <motion.div 
+        </div>        <motion.div 
           animate={{ rotate: 360 }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           className="absolute inset-[-12px] border border-dashed border-lila-500/30 rounded-full"

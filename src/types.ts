@@ -74,3 +74,14 @@ export interface ContactTranslation {
     repos: string;
   };
 }
+
+export interface TestimonialsTranslation {
+  title: string;
+  subtitle: string;
+  items: { name: string; role: string; quote: string }[];
+}
+
+export interface FooterTranslation {
+  builtWith: string;
+  tagline: string;
+}

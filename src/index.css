@@ -26,11 +26,30 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+}
+
+body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+}
+
+/* Hide scrollbar for horizontal scrolling elements */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .liquid-glass {
@@ -358,6 +377,9 @@ img {
 
 /* Reducir movimiento para usuarios que lo prefieren */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
   *,
   *::before,
   *::after {

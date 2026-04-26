@@ -49,12 +49,12 @@ const Skills: React.FC<{ t: SkillsTranslation }> = ({ t }) => {
       </div>
 
       {/* Tabs Switcher */}
-      <div className="flex flex-wrap justify-center gap-3 mb-16 p-2 liquid-glass max-w-2xl mx-auto rounded-[2rem] border border-lila-500/10">
+      <div className="flex flex-row overflow-x-auto hide-scrollbar justify-start md:justify-center gap-2 md:gap-3 mb-16 p-2 liquid-glass w-full md:w-fit max-w-3xl mx-auto rounded-[2rem] border border-lila-500/10">
         {SKILLS_DATA.map((cat) => (
           <button
             key={cat.name}
             onClick={() => setActiveCategory(cat.name)}
-            className={`px-8 py-3 rounded-2xl text-sm font-black uppercase tracking-widest transition-all duration-500 relative ${
+            className={`whitespace-nowrap flex-shrink-0 px-5 md:px-8 py-2.5 md:py-3 rounded-2xl text-[11px] md:text-sm font-black uppercase tracking-widest transition-all duration-500 relative ${
               activeCategory === cat.name 
               ? 'text-white' 
               : 'text-slate-500 dark:text-slate-500 hover:text-lila-500'

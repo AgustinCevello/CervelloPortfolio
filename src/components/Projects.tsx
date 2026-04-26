@@ -40,8 +40,12 @@ const Projects: React.FC<{ t: ProjectsTranslation }> = ({ t }) => {
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.15 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ 
+              duration: 0.7, 
+              delay: index * 0.2,
+              ease: "easeOut" 
+            }}
             className="group liquid-glass rounded-[2.5rem] overflow-hidden flex flex-col h-full border border-lila-500/10 hover:border-lila-500/40 transition-all duration-700 shadow-2xl"
           >
             <div className="relative h-72 overflow-hidden">
